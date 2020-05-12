@@ -10,13 +10,11 @@ features:
   - title: 基于 Class 的 Model
     details: 更多 ES6+ 特性可用，私有属性、装饰器、继承 🥰👏
   - title: Typescript
-    details: 静态类型检查，减少类型错误，增强代码的鲁棒性 🐛🦾
+    details: 静态类型检查、代码提示，减少类型错误，增强代码的鲁棒性 🐛🦾
   - title: 增强器
     details: 在数据流各个阶段加入逻辑，减少模板代码，增强代码可读性 🛠🔧
-  - title: 易扩展
-    details: 利用装饰器，减少对原代码的伤害 🧻💾
   - title: 易使用
-    details: 返回 React Component，把 ReactDOM.render 控制权交给自己 🔍📕
+    details: 只要用过 redux-saga， 就能轻松上手 🔍📕
 footer: MIT Licensed | Copyright © 2018-present Mro
 ---
 
@@ -102,3 +100,7 @@ export default class App extends React.Component {
   }
 }
 ```
+
+#### 更多 demo
+
+[https://github.com/taixw2/dxjs/tree/master/examples](https://github.com/taixw2/dxjs/tree/master/examples)

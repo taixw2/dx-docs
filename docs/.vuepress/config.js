@@ -1,6 +1,6 @@
 module.exports = {
   title: "Dxjs",
-  description: "基于 react 和 redux-saga，面向 AOP 的状态管理工具。",
+  description: "基于 redux-saga 的状态管理工具",
   head: [
     [
       "link",

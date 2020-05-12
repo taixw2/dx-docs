@@ -7,13 +7,13 @@ sidebarDepth: 2
 
 ### 为什么会有 Dxjs
 
-Dxjs 为了解决项目中实际遇到的问题，最初某个项目采用的 redux + redux-saga 做的状态管理，但是每次都要定义 Action Type，并且还要保证 Action Type 和原来的定义的不一样，这样会导致大量的工作，以及难以排查的问题，后来我想引入 Dva，但是很难与现有的 redux-saga 同时使用，之后就花了两三天时间写了一个类 Dva，再往后逐步增强，就产生了 [Dxjs](https://github.com/taixw2/dxjs/)
+[Dxjs](https://github.com/taixw2/dxjs/)
 
 ### Dxjs 能做什么
 
 它对数据流的每一个阶段都加入了钩子，加入了哨兵、伪装者、守卫，分别对应在 effect 执行前，执行时，执行后，以及 reducer 的增强器，能够很方便的集成 immer 等库。
 
-它采用类来管理 Effect、State，通过装饰器来来辨别是 reducer 或 effect，以及 constructor 能够做一些初始化的事情
+它采用类来管理 Effect、State，通过装饰器来来辨别是 reducer 或 effect，以及用 constructor 做一些初始化的事情
 
 ## 安装
 
