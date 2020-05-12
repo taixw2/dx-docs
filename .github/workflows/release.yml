@@ -1,0 +1,31 @@
+on: push 
+name: Uploda Docs To Oss
+jobs:
+  Release:
+    name: Release 
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@master 
+        with:
+          fetch-depth: 2
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Build Project
+        run: npm install && npm run build 
+
+      - name: List output files
+        run: ls -a docs/.vuepress/dist 
+
+      - name: setup oss
+        uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          endpoint: oss-cn-shenzhen.aliyuncs.com
+          access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+      
+      - name: Deploy OSS 🚀
+        run: ossutil cp docs/.vuepress/dist oss://dx-docs/ -rf

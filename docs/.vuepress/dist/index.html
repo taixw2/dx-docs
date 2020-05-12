@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dxjs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="https://hudson-bucket.oss-cn-shenzhen.aliyuncs.com/localhomeqy/huhulogo/Logo2.png">
+    <meta name="description" content="基于 react 和 redux-saga，面向 AOP 的状态管理工具。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.0bf5f454.css" as="style"><link rel="preload" href="/assets/js/app.194cd366.js" as="script"><link rel="preload" href="/assets/js/2.40be9bcd.js" as="script"><link rel="preload" href="/assets/js/5.ef61b2b6.js" as="script"><link rel="prefetch" href="/assets/js/3.cc74f35d.js"><link rel="prefetch" href="/assets/js/4.193e33f4.js"><link rel="prefetch" href="/assets/js/6.7cee2107.js"><link rel="prefetch" href="/assets/js/7.5a03ee4a.js"><link rel="prefetch" href="/assets/js/8.4d45c57d.js"><link rel="prefetch" href="/assets/js/9.ed73f0d1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0bf5f454.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-exact-active router-link-active"><img src="https://hudson-bucket.oss-cn-shenzhen.aliyuncs.com/localhomeqy/huhulogo/Logo2.png" alt="Dxjs" class="logo"> <span class="site-name can-hide">Dxjs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link router-link-exact-active router-link-active">
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/api.html" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="https://github.com/taixw2/dxjs/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  讨论
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/taixw2/dxjs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link router-link-exact-active router-link-active">
+  首页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/api.html" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="https://github.com/taixw2/dxjs/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  讨论
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/taixw2/dxjs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><img src="https://hudson-bucket.oss-cn-shenzhen.aliyuncs.com/localhomeqy/huhulogo/Logo1.png" alt="hero"> <!----> <p class="description">
+      基于 react 和 redux-saga，面向 AOP 的状态管理工具。
+    </p> <p class="action"><a href="/guide/" class="nav-link action-button">
+  Get Started →
+</a></p></header> <div class="features"><div class="feature"><h2>Action Type 基于 Symbol</h2> <p>避免 Action Type 冲突，通过方法名换取 Action, 免去定义 🤡👺</p></div><div class="feature"><h2>基于 Class 的 Model</h2> <p>更多 ES6+ 特性可用，私有属性、装饰器、继承 🥰👏</p></div><div class="feature"><h2>Typescript</h2> <p>静态类型检查，减少类型错误，增强代码的鲁棒性 🐛🦾</p></div><div class="feature"><h2>增强器</h2> <p>在数据流各个阶段加入逻辑，减少模板代码，增强代码可读性 🛠🔧</p></div><div class="feature"><h2>易扩展</h2> <p>利用装饰器，减少对原代码的伤害 🧻💾</p></div><div class="feature"><h2>易使用</h2> <p>返回 React Component，把 ReactDOM.render 控制权交给自己 🔍📕</p></div></div> <div class="theme-default-content custom content__default"><h2 id="开始使用"><a href="#开始使用" class="header-anchor">#</a> 开始使用</h2> <blockquote><p>src/index.ts</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Dx <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@dxjs/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./app'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./user.model.ts'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> DxApp <span class="token operator">=</span> Dx<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>DxApp<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>DxApp<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>src/user.model.ts</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> DxMoel<span class="token punctuation">,</span> Dx <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@dxjs/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Reducer<span class="token punctuation">,</span> Effect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@dxjs/common'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Take<span class="token punctuation">,</span> Takelatest <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@dxjs/saga'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> services <span class="token keyword">from</span> <span class="token string">'../services'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IUserModelState</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> string<span class="token punctuation">;</span>
+  nickname<span class="token operator">:</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+@Dx<span class="token punctuation">.</span><span class="token function">collect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">UserModel</span> <span class="token keyword">extends</span> <span class="token class-name">DxModel</span><span class="token operator">&lt;</span>IUserModelState<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    nickname<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  @<span class="token function">Reducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// 内部</span>
+
+  <span class="token function">updateNickname</span><span class="token punctuation">(</span><span class="token parameter">payload<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>nickname <span class="token operator">=</span> payload<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  @<span class="token function">Reducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">logined</span><span class="token punctuation">(</span><span class="token parameter">logined<span class="token operator">:</span> boolean</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// TODO</span>
+  <span class="token punctuation">}</span>
+
+  @<span class="token function">Effect</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> Takelatest<span class="token punctuation">)</span>
+  <span class="token operator">*</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token parameter">payload<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> userInfo <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$call</span><span class="token punctuation">(</span>services<span class="token punctuation">.</span>getUserInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">yield</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$put</span><span class="token punctuation">(</span>UserModel<span class="token punctuation">.</span><span class="token function">updateNickname</span><span class="token punctuation">(</span>userInfo<span class="token punctuation">.</span>nickname<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>src/app.ts</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Dx <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@dxjs/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> UserModel <span class="token keyword">from</span> <span class="token string">'./user.model.ts'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> state<span class="token punctuation">.</span>UserModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+@<span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 自动 dispatch</span>
+    UserModel<span class="token punctuation">.</span><span class="token function">updateNickname</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token comment">// 返回 action, 不 dispatch</span>
+    UserModel<span class="token punctuation">.</span><span class="token function">updateNickname</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="footer">
+    MIT Licensed | Copyright © 2018-present Mro
+  </div></main></div><div class="global-ui"><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.194cd366.js" defer></script><script src="/assets/js/2.40be9bcd.js" defer></script><script src="/assets/js/5.ef61b2b6.js" defer></script>
+  </body>
+</html>
