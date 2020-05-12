@@ -28,4 +28,4 @@ jobs:
           access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
       
       - name: Deploy OSS 🚀
-        run: ossutil cp docs/.vuepress/dist oss://dx-docs/ -rf
+        run: ossutil cp docs/.vuepress/dist oss://dxjs-docs/ -rf
