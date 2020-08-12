@@ -21,10 +21,10 @@ jobs:
         uses: taixw2/deploy-aliyun-oss@1
         with:
           # aliyun config
-          region: ${{ secrets.REGION }}
+          region: oss-cn-beijing
           access-key-id: ${{ secrets.ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
-          bucket: ${{ secrets.BUCKET }}
+          bucket: deploy-aliyun-oss-test
           secure: true
           # deploy config
           entry: docs/.vuepress/dist/**/* # glob pattern
