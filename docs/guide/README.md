@@ -7,45 +7,19 @@ sidebarDepth: 2
 
 ### 为什么会有 Dxjs
 
-[Dxjs](https://github.com/taixw2/dxjs/)
+如果您在声明一个 model 的时候，更喜欢以类的方式来组织，那么就可以选择 [Dxjs](https://github.com/taixw2/dxjs/)  
+当然这和 redux 的函数式编程理念有所冲突，但是依然不妨碍尝试这种方式来管理状态，或许能够解决某个痛点或提升一些效率。
 
 ### Dxjs 能做什么
 
-它对数据流的每一个阶段都加入了钩子，加入了哨兵、伪装者、守卫，分别对应在 effect 执行前，执行时，执行后，以及 reducer 的增强器，能够很方便的集成 immer 等库。
-
-它采用类来管理 Effect、State，通过装饰器来来辨别是 reducer 或 effect，以及用 constructor 做一些初始化的事情
+[Dxjs](https://github.com/taixw2/dxjs/) 使用类的方式来组织代码， 以及支持插件机制，能够在不同的阶段读取到数据流的状态，如 `beforeReducer`, `reducer`, `afterReducer`, `beforeEffect`, `effect`, `afterEffect`
 
 ## 安装
 
 ### 安装
 
-1. dxjs 内部依赖 symbol 以及 reflect.metadata, 所以对于低级浏览器，需要先引入对于的 polyfill
-2. 引入 redux 的三件套：`react`、`react-dom`、`react-redux`
-3. 引入 dxjs: `@dxjs/core`、`@dxjs/common`
-
 ```sh
-npm install reflect-metadata es6-symbol # polyfill
-npm install react react-dom react-redux 
 npm install @dxjs/core @dxjs/common
-```
-
-### 在 taro 中安装
-
-1. 在 taro 中同样需要引入 polyfill
-2. 引入 taro 的 redux polyfill
-3. 引入 dxjs
-4. 修改 config/index.js
-
-```sh
-npm install reflect-metadata es6-symbol
-npm install @tarojs/redux @tarojs/redux-h5
-npm install @dxjs/core @dxjs/common
-```
-> config/index.js
-```sh
-alias: {
-  "react": require.resolve("@tarojs/taro"),
-  "react-dom": require.resolve("@tarojs/taro"),
-  "react-redux": require.resolve("@tarojs/redux"),
-}
+# 或者
+yarn add @dxjs/core @dxjs/shared
 ```

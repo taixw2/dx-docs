@@ -55,64 +55,6 @@ class UserModel extends DxModel {
 }
 ```
 
-## Sentinel
-
-哨兵的父类，哨兵既可以是一个函数，也可以基于类，但是需要继承 `Sentinel`
-
-- 方法
-  - `getState` 获取当前的 state
-  - `getPayload` 获取 action 的数据
-  - `dispatchCurrentAction` 重新派发当前 action, 传入参数替换当前 payload
-
-- 用法
-```javascript
-class MockSentinel extends Sentinel {
-  async sentinel(): Promise<boolean> {
-    this.getState()
-    return true
-  }
-}
-```
-
-## Disguiser
-
-伪装者的父类
-
-- 方法
-  - `abort` 中断 effect
-  - `next` 执行 effect 的一个 yield
-  - `getPayload` 获取 action 的数据
-  - `dispatchCurrentAction` 重新派发当前 action, 传入参数替换当前 payload
-- 用法
-```javascript
-class MockDisguiser extends Disguiser implements DisguiserInterface {
-  *disguiser(): Generator {
-    yield this.next()
-    yield this.abort()
-  }
-}
-```
-
-## Guard
-
-守卫的父类
-
-- 方法
-  - `getData` 获取 effect return 的数据
-  - `getError` 获取报错
-  - `getPayload` 获取 action 的数据
-  - `getState` 获取当前的 state
-  - `dispatchCurrentAction`  重新派发当前 action, 传入参数替换当前 payload
-
-- 用法
-```javascript
-class MockGuard extends Guard implements GuardInterface {
-  async guard(): Promise<void> {
-    return;
-  }
-}
-```
-
 # @dxjs/common
 
 ## Effect

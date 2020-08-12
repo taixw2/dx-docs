@@ -32,7 +32,7 @@ module.exports = {
     ],
 
     sidebar: {
-      "/guide/": ["", "use"],
+      "/guide/": ["", "use", "plugin"],
     },
   },
 

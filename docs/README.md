@@ -5,16 +5,16 @@ heroText:
 actionText: Get Started →
 actionLink: /guide/
 features:
-  - title: Action Type 基于 Symbol
-    details: 避免 Action Type 冲突，通过方法名换取 Action, 免去定义 🤡👺
-  - title: 基于 Class 的 Model
-    details: 更多 ES6+ 特性可用，私有属性、装饰器、继承 🥰👏
-  - title: Typescript
-    details: 静态类型检查、代码提示，减少类型错误，增强代码的鲁棒性 🐛🦾
-  - title: 增强器
-    details: 在数据流各个阶段加入逻辑，减少模板代码，增强代码可读性 🛠🔧
+  - title: 基于类的方式组织 Model
+    details: 🤡👺
+  - title: 插件机制
+    details: 🥰👏
+  - title: 无冲突的 ActionType
+    details:  🐛🦾
   - title: 易使用
-    details: 只要用过 redux-saga， 就能轻松上手 🔍📕
+    details:  🛠🔧
+  - title: 功能齐全
+    details:  🔍📕
 footer: MIT Licensed | Copyright © 2018-present Mro
 ---
 
@@ -58,21 +58,14 @@ export default class UserModel extends DxModel<IUserModelState> {
   };
 
   @Reducer()
-  // 内部
-
   updateNickname(payload: string) {
     this.state.nickname = payload;
-  }
-
-  @Reducer()
-  logined(logined: boolean) {
-    // TODO
   }
 
   @Effect("name", Takelatest)
   *getUserInfo(payload: string) {
     const userInfo = yield this.$call(services.getUserInfo);
-    yield this.$put(UserModel.updateNickname(userInfo.nickname));
+    UserModel.updateNickname(userInfo.nickname)
   }
 }
 ```
@@ -86,15 +79,13 @@ import UserModel from './user.model.ts';
 
 const mapStateToProps = state => {
   return {
-    id: state.UserModel,
+    id: state.UserModel.id,
   };
 };
 
 @connect(mapStateToProps)
 export default class App extends React.Component {
   componentDidMount() {
-    // 自动 dispatch
-    UserModel.updateNickname('username', true)
     // 返回 action, 不 dispatch
     UserModel.updateNickname('username')
   }
@@ -102,5 +93,4 @@ export default class App extends React.Component {
 ```
 
 #### 更多 demo
-
 [https://github.com/taixw2/dxjs/tree/master/examples](https://github.com/taixw2/dxjs/tree/master/examples)
