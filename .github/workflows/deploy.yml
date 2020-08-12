@@ -18,7 +18,7 @@ jobs:
         run: npm install && npm run build
 
       - name: Deploy OSS
-        uses: taixw2/deploy-aliyun-oss@v1
+        uses: taixw2/deploy-aliyun-oss@1
         with:
           # aliyun config
           region: oss-cn-hongkong.aliyuncs.com
